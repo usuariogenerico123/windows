@@ -1,30 +1,29 @@
 package main
 import(
 	"fmt"
-	"net/http"
+	//"net/http"
 	//"windows/sendTools"
 	"windows/tunnel"
-	"os"
+	
 )
 
 
 func main(){
-	fmt.Println("iniciando script")
+	fmt.Println("ASJDLAJSLDJALKSDJLAKJSDLKASJDLKJALSDAKDLA")
 
-	res, _ := os.ReadFile("info.log")
-	fmt.Println(string(res))
+	
 	re := tunnel.InitTunne()
 	fmt.Println(re)
 
-	resp := http.FileServer(http.Dir("/"))
+	// resp := http.FileServer(http.Dir("/"))
 
-	http.Handle("/", resp)
+	// http.Handle("/", resp)
 
-	fmt.Println("iNICIANDO SERVER")
-	err := http.ListenAndServe(":3005", nil)
-	if(err != nil){
-		fmt.Println(err)
-	}
+	// fmt.Println("iNICIANDO SERVER")
+	// err := http.ListenAndServe(":3005", nil)
+	// if(err != nil){
+	// 	fmt.Println(err)
+	// }
 	
 
 }
