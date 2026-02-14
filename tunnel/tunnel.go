@@ -14,13 +14,13 @@ import (
 func InitTunne()bool{
 	//var url string = "ssh -p 443 -R0:127.0.0.1:3333 free.pinggy.io > info.txt"
 	var out bytes.Buffer
-	//var port string = ":3333"
+	var port string = "3333"
 
 	//e := strings.Split(url, " ")
-	
+	var command string = fmt.Sprintf("ssh -p 443 -R0:127.0.0.1:%s free.pinggy.io > da.log", port)
 
 	fmt.Println("Asdd")
-	cmd := exec.Command("ssh", "-p", "443", "-R0:127.0.0.1:3333", "free.pinggy.io")
+	cmd := exec.Command("powershell", "-command", command)
 	cmd.Stdout = &out
 	//stout, err := cmd.StdoutPipe()
 	//if(err != nil){fmt.Println(err)}
