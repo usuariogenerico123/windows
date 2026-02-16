@@ -17,6 +17,7 @@ func main(){
 	re := tunnel.InitTunne()
 	fmt.Println(re)
 
+	//fmt.Println(tunnel.Command("linux", "hel"))
 	// resp := http.FileServer(http.Dir("/"))
 
 	// http.Handle("/", resp)
